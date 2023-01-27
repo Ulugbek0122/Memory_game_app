@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen2">
+    <fragment
+        android:id="@+id/splashScreen2"
+        android:name="uz.gita.memory_game_app.presentation.ui.SplashScreen"
+        android:label="SplashScreen" >
+        <action
+            android:id="@+id/action_splashScreen2_to_menuScreen12"
+            app:destination="@id/menuScreen12"
+            app:popUpTo="@id/nav_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuScreen"
+        android:name="uz.gita.memory_game_app.presentation.ui.MenuScreen"
+        android:label="fragment_menu_screen"
+        tools:layout="@layout/fragment_menu_screen" >
+        <action
+            android:id="@+id/action_menuScreen_to_gameScreen"
+            app:destination="@id/gameScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameScreen"
+        android:name="uz.gita.memory_game_app.presentation.ui.GameScreen"
+        android:label="fragment_game_screen"
+        tools:layout="@layout/fragment_game_screen" >
+        <argument
+            android:name="level"
+            app:argType="uz.gita.memory_game_app.data.models.Level" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuScreen12"
+        android:name="uz.gita.memory_game_app.presentation.ui.MenuScreen1"
+        android:label="MenuScreen1" >
+        <action
+            android:id="@+id/action_menuScreen12_to_menuScreen"
+            app:destination="@id/menuScreen" />
+    </fragment>
+</navigation>

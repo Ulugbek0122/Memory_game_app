@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/memory_back1"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.ui.MenuScreen">
+
+    <TextView
+        app:layout_constraintVertical_bias="0.6"
+        android:textSize="30sp"
+        android:shadowRadius="5"
+        android:shadowDy="10"
+        android:shadowDx="10"
+        android:textColor="@color/white"
+        android:background="@drawable/back_image"
+        android:shadowColor="#FFC107"
+        android:fontFamily="@font/font2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/play"
+        android:text="Memory Game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/play"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/play"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/font1"
+        android:background="@drawable/back_btn1"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintBottom_toTopOf="@id/btnSettings"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginVertical="20dp"
+        android:id="@+id/btnSettings"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/settings"
+        android:fontFamily="@font/font1"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintHeight_percent="0.07"
+        android:background="@drawable/back_btn1"
+       app:layout_constraintBottom_toTopOf="@id/about"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/play" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/about"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/about"
+        android:fontFamily="@font/font1"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintHeight_percent="0.07"
+        android:background="@drawable/back_btn1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSettings" />
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:scaleType="centerCrop"
+        app:layout_constraintVertical_bias="0.12"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintDimensionRatio="1:1"
+        android:id="@+id/animationView2"
+        app:lottie_fileName="sun.json"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.35"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintVertical_bias="0.75"
+        app:layout_constraintHorizontal_bias="0.2"
+        android:id="@+id/animationView4"
+        app:lottie_fileName="elephant.json"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
